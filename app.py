@@ -1,14 +1,13 @@
-import tkinter as tk
-from tkinter import *
-from tkinter import ttk
-from tkinter import filedialog
 import time
+
+import tkinter as tk
+from tkinter import filedialog
+from tkinter import ttk
+from tkinter import *
+
 from data import *
 
-current_section = None
-section_name = None
 exercise_data = ExercisesList()
-
 
 class Menu:
 
@@ -58,10 +57,7 @@ class Menu:
 
     def to_upload_manually(self):
         self.root.destroy()
-        global current_section
         current_section = UploadExerciseManually()
-        global section_name
-        section_name = "UploadExerciseManually"
 
     def clear_exercises_list(self):
         exercise_data.clear()
@@ -144,10 +140,7 @@ class KeyboardExercise:
 
     def to_menu(self):
         self.root.destroy()
-        global current_section
         current_section = Menu()
-        global section_name
-        section_name = "Menu"
 
 
 class UploadExerciseManually:
@@ -172,16 +165,10 @@ class UploadExerciseManually:
 
     def to_menu(self):
         self.root.destroy()
-        global current_section
         current_section = Menu()
-        global section_name
-        section_name = "Menu"
 
 
 class KeyboardTrainingApp:
 
     def __init__(self):
-        global current_section
         current_section = Menu()
-        global section_name
-        section_name = "Menu"

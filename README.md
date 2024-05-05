@@ -9,8 +9,9 @@
 
 ### Запуск
 ```
-sudo apt-get install python3
-sudo apt-get install python3-tk
+git clone https://github.com/yahigz/mipt-python-1.git &&
+git checkout development &&
+pip install -r requirements &&
 python3 main.py
 ```
 
